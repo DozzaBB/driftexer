@@ -1,1 +1,8 @@
 /server/dist/*
+/back/node_modules/*
+/front/node_modules/*
+/back/config.js
+/back/secrets.js
+/front/index.html
+/front/secrets.js
+/front/test.html

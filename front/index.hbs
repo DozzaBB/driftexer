@@ -77,11 +77,11 @@
         return container;
 
     }
-    const data = {"id":"2024-12-20","images":[{"prompt":"Look for an Evergreen Day","src":"https://images.piclumen.com/normal/20241220/08/44994a3006fb41f390fdd441bef4aa3f.webp"},{"prompt":"National Oatmeal Muffin Day","src":"https://images.piclumen.com/normal/20241220/08/9413123241ed4cb981e729a927655bde.webp"},{"prompt":" National Hard Candy Day","src":"https://images.piclumen.com/normal/20241220/10/80590cf1d55140a5ad7043bd4de90ad8.webp"},{"prompt":"Goa Liberation Day","src":"https://images.piclumen.com/normal/20241220/10/0523a70b4b574271890586da3608da22.webp"},{"prompt":"National Oatmeal Nut Waffles Day","src":"https://images.piclumen.com/normal/20241220/10/c8726f0fa3f74efbb86aeff9def73d8f.webp"},{"prompt":"Aztec New Year","src":"https://images.piclumen.com/normal/20241220/10/1707263861d74caeba82f843bc6158eb.webp"},{"prompt":"National Jewel Day","src":"https://images.piclumen.com/normal/20241220/10/287da9f91087460aab6ba839a1a97e93.webp"},{"prompt":"National Good Samaritan Day","src":"https://images.piclumen.com/normal/20241220/10/33d171b3554d4fc590c61a32595a6cfa.webp"},{"prompt":"International Fanny Pack Day","src":"https://images.piclumen.com/normal/20241220/10/bf855cb3e0be41a2b9825f51e873bfaf.webp"},{"prompt":"Mothering Sunday U.K.","src":"https://images.piclumen.com/normal/20241220/10/7ad1b6f4b18047ec8971a718a1ebd8cb.webp"},{"prompt":"National Learn About Butterflies Day","src":"https://images.piclumen.com/normal/20241220/10/1886911923a443cd8280938a83526fea.webp"},{"prompt":"Constitution Day in Andorra","src":"https://images.piclumen.com/normal/20241220/10/a610f0ba40094dbfbd2e97d9cfa5a8da.webp"},{"prompt":"International Day of Action For Rivers","src":"https://images.piclumen.com/normal/20241220/10/f5bfb8d8167f4622ba9bc5f4c16555cd.webp"},{"prompt":"and Everything You Think Is Wrong Day.","src":"https://images.piclumen.com/normal/20241220/10/64e36fb36e754d2cb394a587bffd8044.webp"}]}
+    const data = JSONDATA
     document.getElementById("test").innerHTML = JSON.stringify(data, null, 1);
     console.log(data);
     const picker = document.getElementById("picker");
-    for (const res of data.images) {
+    for (const res of data?.images ?? []) {
         const newCont = makePickerImage(res);
         picker.appendChild(newCont)
     }
